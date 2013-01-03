@@ -1,7 +1,13 @@
 <?php
 
-include 'lib/Pinatra.php';
+include 'lib/pinatra.php';
+include 'app/conf.php';
 
-$curPage = $_SERVER['REQUEST_URI'];
-echo "<p>Page URL: ${curPage}</p>";
+
+$uri = str_replace(PConf::BASE_DIR, '', $_SERVER['REQUEST_URI']);
+$app = new Pinatra();
+$app->load_routes('app/app.php');
+
+echo "<p>Page URL: ${uri}</p>";
+
 ?>

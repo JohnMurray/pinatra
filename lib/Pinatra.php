@@ -12,7 +12,24 @@ class Pinatra
    * in a match.
    */
   public function action($method, $uri) {
-    
+    if (isset($method) && isset($uri) && $method != null && $uri != null) {
+      $method = strtolower($method);
+      $actions = $method == 'get' ? $get_actions : $post_actions;
+      foreach ($actions as $match => $callback) {
+        $match_value = preg_match($match, $uri);
+        if ($match_value === false) {
+          // TODO: do something real here??
+          echo 'ERROR on match';
+        }
+        else if ($match_value !== 0) {
+          $callback();
+          return;
+        }
+      }
+    }
+
+    // TODO: do something real here??
+    echo 'no matching route found';
   }
 
 
@@ -22,7 +39,7 @@ class Pinatra
    */
   public function get($match, $callback) {
     if (isset($match) && isset($callback)) {
-      array_push($get_actions, array($match, $callback));
+      $get_actions[$match] = $callback;
     }
   }
 
@@ -32,8 +49,19 @@ class Pinatra
    */
   public function post($match, $callback) {
     if (isset($match) && isset($callback)) {
-      array_push($post_actions, array($match, $callback));
+      $post_actions[$match] = $callback;
     }
+  }
+
+
+  /**
+   * This is how we are going to load our paths in a Sinatra-classic-like way.
+   * The user will define a file of routes calling the [get, post] methods and
+   * we will include them in the class (calling them) and defining all of our
+   * routes to match against.
+   */
+  public function load_routes($file_path) {
+    include $file_path;
   }
 }
 
