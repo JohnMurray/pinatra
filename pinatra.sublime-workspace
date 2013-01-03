@@ -1,0 +1,505 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"testi",
+				"testimonialWaiver"
+			],
+			[
+				"overall",
+				"overallSatisfaction"
+			],
+			[
+				"willi",
+				"willingnessToHelp"
+			],
+			[
+				"timelyM",
+				"timelyManner"
+			],
+			[
+				"reso",
+				"resolvedStatus"
+			],
+			[
+				"par",
+				"partial_path"
+			],
+			[
+				"Min",
+				"min_year"
+			],
+			[
+				"e",
+				"extension"
+			],
+			[
+				"sess",
+				"session_id"
+			],
+			[
+				"upd",
+				"updated_xml"
+			],
+			[
+				"node",
+				"node_y"
+			],
+			[
+				"web_la",
+				"web_layout_dom_doc"
+			],
+			[
+				"web_lay",
+				"web_layout_reader"
+			],
+			[
+				"web_layout_re",
+				"web_layout_resource"
+			],
+			[
+				"ex",
+				"extension_dir"
+			],
+			[
+				"mac",
+				"mac_address"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"xml",
+				"Set Syntax: XML"
+			],
+			[
+				":w",
+				":w - Save"
+			],
+			[
+				"json",
+				"Set Syntax: JSON"
+			],
+			[
+				"javascr",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"javasc",
+				"Set Syntax: JavaScript"
+			],
+			[
+				":W",
+				":w - Save"
+			],
+			[
+				"html",
+				"HTML: Encode Special Characters"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				":1",
+				"Snippet: Array.new(10) { |i| .. }"
+			],
+			[
+				"ssini",
+				"Set Syntax: INI"
+			],
+			[
+				"php",
+				"Set Syntax: PHP"
+			],
+			[
+				"c#",
+				"Set Syntax: C#"
+			],
+			[
+				"upda",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"-",
+				"Set Syntax: Objective-C"
+			],
+			[
+				"hex",
+				"Set Syntax: Hex"
+			],
+			[
+				"binar",
+				"Package Control: Create Binary Package File"
+			],
+			[
+				"pcains",
+				"Package Control: Install Package"
+			],
+			[
+				"pcadd",
+				"Package Control: Add Channel"
+			],
+			[
+				"csv",
+				"Sort Lines (Case Sensitive)"
+			],
+			[
+				"pc insta",
+				"Package Control: Install Package"
+			],
+			[
+				"lisp",
+				"Set Syntax: Lisp"
+			],
+			[
+				"lis",
+				"Set Syntax: Lisp"
+			],
+			[
+				"matla",
+				"Set Syntax: MATLAB"
+			],
+			[
+				"mat",
+				"Set Syntax: MATLAB"
+			],
+			[
+				"ssxm",
+				"Set Syntax: XML"
+			],
+			[
+				"ssxml",
+				"Set Syntax: XML"
+			],
+			[
+				"ssx",
+				"Set Syntax: XML"
+			],
+			[
+				":",
+				":w - Save"
+			],
+			[
+				"ssc",
+				"Set Syntax: C"
+			],
+			[
+				":$",
+				":$ - EOF"
+			],
+			[
+				"ssrb",
+				"Set Syntax: Ruby"
+			],
+			[
+				":ssrb",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				":q",
+				"Set Syntax: SQL"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/tfs/development/NetSuiteToolKit/Templates/support-survey-email.html",
+		"/C/tfs/development/NetSuiteToolKit/Templates/support-survey.html",
+		"/D/ProjectFiles/NetworkShares/waffles/Bookings/Web/Web.config",
+		"/D/ProjectFiles/NetworkShares/waffles/Bookings/WindowsService/NetSuiteBookings.WindowsService.exe.config",
+		"/C/tfs/development/NetSuiteToolKit/Bookings/WindowsService/bin/Release/App.config",
+		"/D/ProjectFiles/NetworkShares/waffles/Bookings/WindowsService/App.config",
+		"/C/tfs/development/NetSuiteToolKit/Bookings/WindowsService/bin/Release/NetSuiteBookings.WindowsService.exe.config",
+		"/C/tfs/development/NetSuiteToolKit/Bookings/Web/obj/Release/TransformWebConfig/transformed/Web.config",
+		"/C/Users/jmurray/Desktop/blah.js",
+		"/C/tfs/development/NetSuiteToolKit/Templates/survey-js.js",
+		"/D/git/ManholeCover-IMS/Infrastructure Map Server Notes",
+		"/C/tmp/OA-Sync-Service/App.config",
+		"/C/tmp/OA-Sync-Service/InstallUtil.InstallLog",
+		"/C/tfs/development/AbercrombieImageGenerator/AbercrombieImageGenerator/AbercrombieImageGenerator.sln",
+		"/C/tfs/development/AbercrombieImageGenerator/AbercrombieImageGenerator/AbercrombieImageGenerator/AbercrombieImageGenerator.csproj",
+		"/D/git/ManholeCover-IMS/DB Migration Notes",
+		"/C/tmp/script.rb",
+		"/C/tmp/sync.log.txt",
+		"/C/tmp/OA-Sync-Service/sync.log.txt",
+		"/C/tmp/OA-Sync-Service/NetSuiteBookings.WindowsService.exe.config",
+		"/C/tmp/examples/net/2.0/nant.config",
+		"/C/tmp/examples/net/2.0/Repository/nant.config",
+		"/D/git/NetSuiteToolKit/Bookings/WindowsService/bin/Debug/sync.log",
+		"/C/tmp/OA-Sync-Service/log4net.xml",
+		"/D/git/NetSuiteBookings/WindowsService/InstallUtil.InstallLog",
+		"/D/git/NetSuiteToolKit/Bookings/WindowsService/bin/Debug/InstallUtil.InstallLog",
+		"/D/git/NetSuiteBookings/WindowsService/Install.bat",
+		"/C/Users/jmurray/Documents/My Received Files/Cards.bak",
+		"/D/git/NetSuiteBookings/NetSuiteBookings.sln",
+		"/C/Users/jmurray/Downloads/CustomItemSearchResults619.csv",
+		"/C/Users/jmurray/Downloads/report-1.1.dtd",
+		"/C/ProgramData/Autodesk/ApplicationPlugins/CogoPointAlignment.bundle/PackageContents.xml",
+		"/C/tfs/development/SageToNetSuiteMigrationTool/src/notes",
+		"/C/Users/jmurray/Desktop/file-copy/script.rb",
+		"/C/ProgramData/Autodesk/ApplicationPlugins/CogoPointAlignment.bundle/Contents/Configuration.xml",
+		"/C/Users/jmurray/Downloads/pct_complete_script3.js",
+		"/D/Program Files/eclipse/eclipse.ini",
+		"/C/tfs/development/SageToNetSuiteMigrationTool/src/SageToNetSuiteMigrationTool/SageToNetSuiteMigrationTool.csproj",
+		"/C/tfs/development/SageToNetSuiteMigrationTool/src/SageToNetSuiteMigrationTool.sln",
+		"/C/tfs/development/SageToNetSuiteMigrationTool/src/Data/DataModel.edmx",
+		"/D/Program Files/DisplayFusion/DFSSaver.scr.config",
+		"/D/Program Files/DisplayFusion/LicenseEN.txt",
+		"/D/Program Files/DisplayFusion/DisplayFusion.exe.config",
+		"/D/Program Files/DisplayFusion/unins000.dat",
+		"/C/work",
+		"/D/Program Files/Autodesk/Autodesk Infrastructure Web Server Extension 2013/Php/php.ini",
+		"/C/wamp/www/db-wamp.php",
+		"/D/Program Files/Autodesk/Autodesk Infrastructure Web Server Extension 2013/Apache2/htdocs/test/db-test.php",
+		"/D/Program Files/Autodesk/Autodesk Infrastructure Web Server Extension 2013/Apache2/htdocs/test/common.php",
+		"/D/Program Files/Autodesk/Autodesk Infrastructure Web Server Extension 2013/Apache2/htdocs/test/constants.php",
+		"/D/Program Files/Autodesk/Autodesk Infrastructure Web Server Extension 2013/Apache2/htdocs/test/map.php",
+		"/C/Windows/ODBC.INI",
+		"/D/ProjectFiles/FortCampbell/notes",
+		"/D/Program Files/Autodesk/Autodesk Infrastructure Web Server Extension 2013/www/mapviewerphp/constants.php",
+		"/D/Program Files/Autodesk/Autodesk Infrastructure Web Server Extension 2013/www/webconfig.ini",
+		"/D/Program Files/Autodesk/Autodesk Infrastructure Web Server Extension 2013/Apache2/conf/httpd.conf",
+		"/D/Program Files/Autodesk/Autodesk Infrastructure Web Server Extension 2013/www/phpviewersample/overview/overviewmain.php",
+		"/D/Program Files/Autodesk/Autodesk Infrastructure Web Server Extension 2013/www/phpviewersample/findaddress/gotopoint.php",
+		"/D/Program Files/Autodesk/Autodesk Infrastructure Web Server Extension 2013/Apache2/htdocs/map.php",
+		"/D/Program Files/Autodesk/Autodesk Infrastructure Web Server Extension 2013/Samples/phpviewersample/ajaxviewersample.php",
+		"/D/Program Files/Autodesk/Autodesk Infrastructure Web Server Extension 2013/www/mapviewerphp/measure.php",
+		"/D/Program Files/Autodesk/Autodesk Infrastructure Web Server Extension 2013/Apache2/htdocs/blank.php",
+		"/D/Program Files/Autodesk/Autodesk Infrastructure Web Server Extension 2013/www/index.php",
+		"/D/git/ManholeCover-IMS/ManholeCover-IMS/index.php",
+		"/C/Program Files/Autodesk/Revit Architecture 2013/Program/Samples/rac_advanced_sample_family.rfa",
+		"/C/Program Files/Autodesk/Revit Architecture 2013/Program/Samples/rac_advanced_sample_project.rvt",
+		"/D/git/SageToNetSuiteMigrationTool/SageToNetSuiteMigrationTool/bin/Debug/log4net.xml",
+		"/C/Users/jmurray/Documents/My Received Files/Tx Snippet.snippet",
+		"/D/git/SageToNetSuiteMigrationTool/README.md",
+		"/C/Users/jmurray/AppData/Roaming/Autodesk/AutoCAD 2013 - English/R19.0/enu/Support/acad.pat",
+		"/C/SVNProjects/WireCrafters/aWireCrafters/acad.pat",
+		"/C/SVNProjects/WireCrafters/aWireCrafters/acad.lin",
+		"/C/Users/jmurray/AppData/Roaming/Autodesk/AutoCAD 2013 - English/R19.0/enu/Support/acad.lin",
+		"/C/tfs/development/AbercrombieImageGenerator/AbercrombieImageGenerator/AbercrombieImageGenerator.Installer/AbercrombieImageGenerator.reg",
+		"/D/git/johnmurray_io/Gemfile",
+		"/D/git/johnmurray_io/blogs/in-the-works/_Metric-K--Center----Question.md",
+		"/D/git/johnmurray_io/blogs/in-the-works/_Geofencing.md",
+		"/C/SVNProjects/WireCrafters/aWireCrafters/aWireCrafters2013 - Development.reg",
+		"/C/ProgramData/ICADSupport/Networks.xml",
+		"/C/ProgramData/ICADSupport/Drawings/ICADE/intelligrated.lin",
+		"/D/TestFiles/ICAD-E/Ethernet/network test 10-30.iep",
+		"/D/Program Files/Autodesk/Autodesk Infrastructure Web Server Extension 2013/www/blank.html",
+		"/C/Users/jmurray/AppData/Local/Temp/acminidump.dmp",
+		"/C/SVNProjects/ICADShared/ICAD-E/CableTool/Ethernet/EthernetPanel.xaml.cs",
+		"/D/Program Files/Autodesk/Autodesk Infrastructure Map Server 2013/Logs/Error.log",
+		"/D/TestFiles/Lisp/MYCLEAN.LSP",
+		"/D/Program Files/Autodesk/Autodesk Infrastructure Map Server 2013/Logs/Admin.log",
+		"/D/Program Files/Autodesk/Autodesk Infrastructure Web Server Extension 2013/Apache2/Logs/httpd.pid",
+		"/D/Program Files/Autodesk/Autodesk Infrastructure Web Server Extension 2013/Apache2/Logs/error.log",
+		"/D/Program Files/Autodesk/Autodesk Infrastructure Web Server Extension 2013/Apache2/Logs/mod_jk.log",
+		"/D/Program Files/Autodesk/Autodesk Infrastructure Web Server Extension 2013/Apache2/Logs/access.log",
+		"/D/git/Lisp/abercrombie-image-generator.reg",
+		"/D/TestFiles/Lisp/MYCLEAN._LS",
+		"/D/TestFiles/ICAD-E/Ethernet/network test 10-23.iep",
+		"/D/poop.XML",
+		"/C/tmp/MYCLEAN.LSP",
+		"/C/Program Files/Autodesk/ApplicationPlugins/FusionPlugin2013.bundle/PackageContents.xml",
+		"/C/ProgramData/Autodesk/ApplicationPlugins/ImageGenerator.bundle/PackageContents.xml",
+		"/C/Program Files/Autodesk/ApplicationPlugins/ImageGenerator.bundle/PackageContents.xml",
+		"/C/ProgramData/Autodesk/ApplicationPlugins/ImageGenerator2.bundle/PackageContents.xml",
+		"/C/SVNProjects/ICADShared/ICADSetup/Product.wxs",
+		"/C/tfs/development/ASI-CAD-Club/ASI-CAD-Club/Scripts/jquery.livesearch.js",
+		"/C/SVNProjects/WireCrafters/aWireCrafters/aWireCrafters.cs",
+		"/D/TestFiles/ICAD-E/Ethernet/network test 10-18.iep",
+		"/C/SVNProjects/ICADShared/ICAD-E/CableTool/Ethernet/EthernetFunctions.cs",
+		"/C/Users/jmurray/Downloads/MemoizedOptimalBST.m",
+		"/C/Users/jmurray/Downloads/MatrixChainOrder.m",
+		"/C/Users/jmurray/Downloads/RecursiveOptimalBST.m",
+		"/C/SVNProjects/ICADShared/ICAD-E/DataUtils.cs",
+		"/C/ProgramData/Autodesk/Revit/Addins/2013/CurtainSystem.addin",
+		"/C/SVNProjects/ICADShared/ICAD-E/ICAD-E.csproj",
+		"/C/SVNProjects/WireCrafters/aWireCrafters.Installer/aWireCraftersInstaller.cs",
+		"/C/Users/jmurray/AppData/Roaming/Autodesk/Revit/Addins/2013/curtain/CurtainSystem.addin",
+		"/D/Program Files/Autodesk/Revit 2013 SDK/Software Development Kit/Samples/CurtainSystem/CS/CurtainSystem.addin",
+		"/D/Program Files/Autodesk/Revit 2013 SDK/Software Development Kit/Samples/CurtainSystem/CS/Command.cs",
+		"/C/Windows/System32/drivers/etc/hosts",
+		"/C/ProgramData/Autodesk/Revit Server 2013/Config/rsn.ini",
+		"/D/Program Files/Autodesk/Revit 2013 SDK/Software Development Kit/Samples/CurtainSystem/CurtainSystem.rvt",
+		"/C/tmp/RevitServerViewer/Program.cs",
+		"/C/tmp/RevitServerViewer/MyViewer.Designer.cs",
+		"/C/tmp/RevitServerViewer/MyViewer.cs",
+		"/C/ProgramData/ICADSupport/Network.xml",
+		"/C/ProgramData/ICADSupport/ICADPropertiesBeta.xml",
+		"/C/ProgramData/ICADSupport/ICADProperties.xml",
+		"/C/ProgramData/ICADSupport/eca.txt",
+		"/C/ProgramData/ICADSupport/UserValidation.csv",
+		"/C/ProgramData/ICADSupport/lastUpdateTime.udt",
+		"/D/test/Revit Server SDK/RevitServerViewer/Program.cs"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			",\"([a-z])",
+			",\"[A-Za-z]",
+			"},{",
+			"hello",
+			"dd",
+			"dt",
+			"\"",
+			"B>",
+			"<B",
+			"font",
+			"div",
+			"selected",
+			"submit",
+			"Page_ValidationActive",
+			"ValidatorOnSubmit",
+			"ValidatorCommonOnSubmit",
+			"document",
+			"\\?",
+			"?",
+			"odbc",
+			"include",
+			"php",
+			"icw_ethernet_s",
+			"<voltage>\\d+V[AD]C\\S",
+			"ethernet[.\\r\\n]+<voltage>\\d+V[AD]C\\S",
+			"ethernet[.\\r\\n]*<voltage>\\d+V[AD]C\\S",
+			"ethernet[.\\r\\n]*?<voltage>\\d+V[AD]C\\S",
+			"ethernet[.\\n]*?<voltage>\\d+V[AD]C\\S",
+			"ethernet.*?<voltage>\\d+V[AD]C\\S",
+			"<voltage>\\d+V[AD]C\\S",
+			"<voltage",
+			"icw_ethernet_switch",
+			"21223600",
+			"controlvoltage",
+			"<voltage",
+			"controlvoltage",
+			"voltage",
+			"setting",
+			"projectdefault",
+			"get_ins_point",
+			"ice"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			",\\n\\t\\t\"\\1",
+			",\\n\\t\"\\1",
+			",\\n\\t\\1",
+			",\\n\"\\1"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true
+}
