@@ -10,6 +10,19 @@ task to implement the basic feature-set that is present in Sinatra. Mainly
 the minimalistic route matching and hooks that Sinatra exposes for whipping
 up dandy little web-apps/api's very quickly.
 
+
+## On the Calendar
+
+The items that I will be adding/implementing next are (roughly) as follows:
+
++ Parametric URIs (variables actually passed to the handler functions)
++ Configuration blocks
++ Testing before and after hooks
++ POST functionality
++ DELETE functionality
++ HEAD functionality
++ Ability to embed instances within each other (like Rack-apps)
+
 ## Contributing
 If you actually like the sound of what I plan to do and would like to take it
 a little further, feel free to send me an email at
