@@ -20,6 +20,24 @@ trait singleton {
     }
 }
 
+
+/**
+ * Something to try and make serving JSON content just a litle simpler
+ */
+trait JSONUtils {
+
+  public function json($object) {
+    // set appropriate headers
+    header('Content-Type: application/json', true);
+
+    // TODO: pretty-print JSON based on config settings
+    // return the serialized object
+    return json_encode($object);
+  }
+
+}
+
+
 /**
  * The main class for our Sinatra clone. Where all of the (not-so-much-)magic
  * happens!  :-]
@@ -27,10 +45,11 @@ trait singleton {
 class Pinatra {
 
   use singleton;
+  use JSONUtils;
 
-  private $before_hooks = [];
-  private $after_hooks = [];
-  private $routes = [];
+  public $before_hooks = [];
+  public $after_hooks = [];
+  public $routes = [];
 
   private function __construct() {}
 
@@ -90,14 +109,22 @@ class Pinatra {
 
   public static function handle_request() {
     // TODO: combine with routing code that I wrote at work...
+
+    // TODO: remove test-code (but take not of the bindTo method)
+    $app = Pinatra::instance();
+    $callback = $app->routes['get']['/hello/'];
+    $callback = $callback->bindTo($app);
+    echo $callback();
   }
+
 }
 
 
 
 // Some test routes
 Pinatra::get('/hello/', function() {
-  echo 'hello-route has been matched!';
+  return $this->json(['key' => 'hello-route has been matched!']);
 });
-var_dump(Pinatra::instance());
+Pinatra::handle_request();
+//var_dump(Pinatra::instance());
 ?>
