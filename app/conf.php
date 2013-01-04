@@ -10,7 +10,7 @@
 
 class PConf
 {
-  const BASE_DIR = '/pinatra';
+  const BASE_DIR = '';
 }
 
 ?>
