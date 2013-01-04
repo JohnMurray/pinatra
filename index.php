@@ -2,7 +2,12 @@
 
 include 'lib/pinatra.php';
 
-//$uri = str_replace(PConf::BASE_DIR, '', $_SERVER['REQUEST_URI']);
-Pinatra::handle_request('get', '/hello');
+
+// Some test routes
+Pinatra::get('/hello', function() {
+  return $this->json(['key' => 'hello-route has been matched!']);
+});
+
+Pinatra::run();
 
 ?>

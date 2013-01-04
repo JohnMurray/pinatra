@@ -5,19 +5,19 @@
  */
 trait singleton {    
     
-    public static function instance() {
-      static $_instance = null;
-      $class = __CLASS__;
-      return $_instance ?: $_instance = new $class;
-    }
-    
-    public function __clone() {
-        trigger_error('Cloning '.__CLASS__.' is not allowed.',E_USER_ERROR);
-    }
-    
-    public function __wakeup() {
-        trigger_error('Unserializing '.__CLASS__.' is not allowed.',E_USER_ERROR);
-    }
+  public static function instance() {
+    static $_instance = null;
+    $class = __CLASS__;
+    return $_instance ?: $_instance = new $class;
+  }
+  
+  public function __clone() {
+      trigger_error('Cloning '.__CLASS__.' is not allowed.',E_USER_ERROR);
+  }
+  
+  public function __wakeup() {
+      trigger_error('Unserializing '.__CLASS__.' is not allowed.',E_USER_ERROR);
+  }
 }
 
 
@@ -50,9 +50,42 @@ trait JSONUtils {
  *   /*.css
  *   etc.
  *
+ * We're going to take URIs of those styles and transfer them into proper
+ * (Perl) regular expressions for matching against real-URIs.
  */
-trait URIParser {
-  // TODO: write the parser
+trait Routing {
+
+  private $URIParser_PLACEHOLDER = '([^\/]+)';
+  private $URIParser_GLOB = '*';
+
+
+  /**
+   * Private: Generate a PHP (Perl) regular expression given the
+   *          Sinatra-style expression in the get/post/put/etc. functions.
+   */
+  private function compute_regex($match) {
+    // get the URI parts of the match-pattern given
+    $parts = array_filter(explode('/', $match), function ($val) { 
+      return !empty($val);
+    });
+
+    // build our pattern-matching regex from given route
+    $regex= '/^';
+
+    foreach ($parts as $part) {
+      if ($part[0] === ':') {
+        $regex .= '\/' . $this->URIParser_PLACEHOLDER;
+      }
+      else if ($part[0] === '*'){
+        $regex .= '\/' . $this->URIParser_GLOB;
+      }
+      else {
+        $regex .= '\/' . $part;
+      }
+    }
+    $regex .= '\/?$/';
+    return $regex;
+  }
 }
 
 
@@ -64,6 +97,7 @@ class Pinatra {
 
   use singleton;
   use JSONUtils;
+  use Routing;
 
   public $before_hooks = [];
   public $after_hooks = [];
@@ -76,6 +110,7 @@ class Pinatra {
    *         match with and a callback that will handle the results.
    */
   public function register($method, $match, $callback) {
+    $match = $this->compute_regex($match);
     $this->routes[$method][$match] = $callback;
   }
 
@@ -85,7 +120,8 @@ class Pinatra {
    *         that it can be applied to a number of routes.
    */
   public function register_before($match, $callback) {
-    if (empty($match)) $match = '/*/';
+    if (empty($match)) $match = '*';
+    $match = $this->compute_regex($match);
     $before_hooks[$match] = $callback;
   }
 
@@ -95,7 +131,8 @@ class Pinatra {
    *         that it can be applied to a number of routes.
    */
   public function register_after($match, $callback) {
-    if (empty($match)) $match = '/*/';
+    if (empty($match)) $match = '*';
+    $match = $this->compute_regex($match);
     $after_hooks[$match] = $callback;
   }
 
@@ -106,25 +143,31 @@ class Pinatra {
    * This is pretty self-explanatory... honestly.
    */
 
-  public static function get($match, $callback) {
+  public function get($match, $callback) {
     $app = Pinatra::instance();
     $app->register('get', $match, $callback);
   }
-  public static function post($match, $callback) {
+  public function post($match, $callback) {
     $app = Pinatra::instance();
     $app->register('post', $match, $callback);
   }
-  public static function before($match, $callback) {
+  public function before($match, $callback) {
     $app = Pinatra::instance();
     $app->register_before($match, $callback);
   }
-  public static function after($match, $callback) {
+  public function after($match, $callback) {
     $app = Pinatra::instance();
     $app->register_after($match, $callback);
   }
 
 
 
+  /**
+   * Method that is called when we actually want to process an incoming
+   * request based on the method and uri provided. This method (expecting
+   * to be given a URI and method) can also be used for re-routing requests
+   * internally.
+   */
   public static function handle_request($method, $uri) {
     // TODO: combine with routing code that I wrote at work...
     $app = Pinatra::instance();
@@ -145,14 +188,16 @@ class Pinatra {
     }
   }
 
+
+  public static function run() {
+    $uri = str_replace('', '', $_SERVER['REQUEST_URI']);
+    Pinatra::handle_request('get', $uri);
+  }
+
 }
 
 
 
-// Some test routes
-Pinatra::get('/hello/', function() {
-  return $this->json(['key' => 'hello-route has been matched!']);
-});
-//Pinatra::handle_request();
-//var_dump(Pinatra::instance());
+
+
 ?>
