@@ -15,17 +15,22 @@ class Pinatra {
   use JSONUtils;
   use Routing;
 
-  public $before_hooks = [];
-  public $after_hooks = [];
-  public $routes = [];
+  protected $before_hooks = [];
+  protected $after_hooks = [];
+  protected $routes = [];
+  protected $config = [];
 
-  private function __construct() {}
+  private function __construct() {
+    $this->config = [
+      'base_path'   => ''
+    ];
+  }
 
   /**
    * Public: Register a user-defined handler with a particular regex to
    *         match with and a callback that will handle the results.
    */
-  public function register($method, $match, $callback) {
+  private function register($method, $match, $callback) {
     $match = $this->compute_regex($match);
     $this->routes[$method][$match] = $callback;
   }
@@ -35,7 +40,7 @@ class Pinatra {
    *         for a particular request. A match is also given such
    *         that it can be applied to a number of routes.
    */
-  public function register_before($match, $callback) {
+  private function register_before($match, $callback) {
     if (empty($match)) $match = '*';
     $match = $this->compute_regex($match);
     $before_hooks[$match] = $callback;
@@ -46,10 +51,19 @@ class Pinatra {
    *         for a particular request. A match is also given such
    *         that it can be applied to a number of routes.
    */
-  public function register_after($match, $callback) {
+  private function register_after($match, $callback) {
     if (empty($match)) $match = '*';
     $match = $this->compute_regex($match);
     $after_hooks[$match] = $callback;
+  }
+
+  /**
+   * Public: Allow the user to change any configuration options
+   *         that will be used by Pinatra. Also, any custom options
+   *         that they just want to provide can also be stored.
+   */
+  private function user_configuration($callback) {
+    $this->config = $callback($this->config);
   }
 
 
@@ -59,6 +73,10 @@ class Pinatra {
    * This is pretty self-explanatory... honestly.
    */
 
+  public static function configure($callback) {
+    $app = Pinatra::instance();
+    $app->user_configuration($callback);
+  }
   public static function get($match, $callback) {
     $app = Pinatra::instance();
     $app->register('get', $match, $callback);
@@ -105,7 +123,13 @@ class Pinatra {
    * Used to start the application (after everything has been initialized)
    */
   public static function run() {
-    $uri = str_replace('', '', $_SERVER['REQUEST_URI']);
+    $app = Pinatra::instance();
+    
+    $uri = str_replace(
+      $app->config['base_path'], 
+      '', 
+      $_SERVER['REQUEST_URI']);
+
     Pinatra::handle_request('get', $uri);
   }
 

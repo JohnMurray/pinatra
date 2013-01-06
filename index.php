@@ -2,6 +2,10 @@
 
 include 'lib/pinatra.php';
 
+Pinatra::configure(function ($conf) {
+  $config['base_path'] = '/bank';
+  return $config;
+});
 
 // Some test routes
 Pinatra::get('/hello/:name', function($name) {

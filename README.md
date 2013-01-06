@@ -40,7 +40,7 @@ The items that I will be adding/implementing next are (roughly) as follows:
 
 + ~~Parametric URIs (variables actually passed to the handler functions)~~
 + ~~Refactoring of handle_request function~~
-+ Configuration blocks
++ ~~Configuration blocks~~
 + Testing before and after hooks
 + POST functionality
 + DELETE functionality
