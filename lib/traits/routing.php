@@ -48,6 +48,36 @@ trait Routing {
     $regex .= '\/?$/';
     return $regex;
   }
+
+  private function find_route($method, $uri) {
+    $return_value = null;
+
+    if ($method != null && !empty($method) 
+        && $uri != null && !empty($uri)) {
+
+      $method = strtolower($method);
+      $uri = strtolower($uri);
+
+      foreach($this->routes[$method] as $match => $callback) {
+        $match_groups = [];
+        $match_value = preg_match_all(
+          $match, 
+          $uri, 
+          $match_groups, 
+          PREG_SET_ORDER);
+
+        if ($match_value !== 0) {
+          $return_value = [
+            'callback'  => $callback,
+            'arguments' => array_slice($match_groups[0], 1)
+          ];
+          break;
+        }
+      }
+    }
+
+    return $return_value;
+  }
 }
 
 ?>

@@ -6,8 +6,8 @@ require 'traits/routing.php';
 
 
 /**
- * The main class for our Sinatra clone. Where all of the (not-so-much-)magic
- * happens!  :-]
+ * The main class for our Sinatra clone. Where all of the 
+ * (not-so-much-)magic happens!  :-]
  */
 class Pinatra {
 
@@ -88,23 +88,16 @@ class Pinatra {
    */
   public static function handle_request($method, $uri) {
     $app = Pinatra::instance();
-    if ($method != null && !empty($method) && $uri != null && !empty($uri)) {
-      $method = strtolower($method);
-      foreach($app->routes[$method] as $match => $callback) {
-        $match_groups = [];
-        $match_value = preg_match_all($match, $uri, $match_groups, PREG_SET_ORDER);
-        if ($match_value === false) {
-          // TODO: do something real here??
-          echo 'ERROR on match.';
-          break;
-        }
-        else if ($match_value !== 0) {
-          $callback = $callback->bindTo($app);
-          echo call_user_func_array($callback, array_slice($match_groups[0], 1));
-          break;
-        }
-      }
+
+    // find and call route-handler
+    $route_match = $app->find_route($method, $uri);
+    if ($route_match !== null) {
+      $route_match['callback']->bindTo($app);
+      echo call_user_func_array(
+        $route_match['callback'], 
+        $route_match['arguments']);
     }
+    
   }
 
 
