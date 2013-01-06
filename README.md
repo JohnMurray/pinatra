@@ -11,6 +11,29 @@ the minimalistic route matching and hooks that Sinatra exposes for whipping
 up dandy little web-apps/api's very quickly.
 
 
+## Getting Started
+
+A simple hello-world example in good 'ole Sinatra fashion:
+
+```php
+# index.php
+require 'pinatra.php';
+
+Pinatra::get('/hi', function () { return 'Hello World!'; });
+Pinatra::run();
+```
+
+```bash
+php -S 0.0.0.0:8181
+```
+
+
+## Compatability
+
+This little framework is only compatible with PHP v5.4.x since it was just
+for fun and I don't care about any sort of backwards compatability.
+
+
 ## On the Calendar
 
 The items that I will be adding/implementing next are (roughly) as follows:
