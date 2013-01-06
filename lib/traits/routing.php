@@ -49,16 +49,30 @@ trait Routing {
     return $regex;
   }
 
+  /**
+   * Private: Find the first-matched handler for a given URI
+   *
+   * Returns a callback and a list of arguments (parsed from the URI)
+   */
   private function find_route($routes, $method, $uri) {
-    $return_value = null;
+    $matches = $this->find_all_routes($routes[$method], $uri, 1);
+    return array_shift($matches);
+  }
 
-    if ($method != null && !empty($method) 
-        && $uri != null && !empty($uri)) {
+  /**
+   * Private: Find all-matched handler for a given URI
+   *
+   * Returns a callback and a list of arguments (parsed from the URI)
+   */
+  private function find_all_routes($routes, $uri, $max = -1) {
+    $return_values = [];
 
-      $method = strtolower($method);
+    if ($uri != null && !empty($uri)) {
+
       $uri = strtolower($uri);
+      $count = 0;
 
-      foreach($routes[$method] as $match => $callback) {
+      foreach($routes as $match => $callback) {
         $match_groups = [];
         $match_value = preg_match_all(
           $match, 
@@ -67,16 +81,16 @@ trait Routing {
           PREG_SET_ORDER);
 
         if ($match_value !== 0) {
-          $return_value = [
+          array_push($return_values, [
             'callback'  => $callback,
             'arguments' => array_slice($match_groups[0], 1)
-          ];
-          break;
+          ]);
+          if ($max == ++$count) break;
         }
       }
     }
 
-    return $return_value;
+    return $return_values;
   }
 }
 

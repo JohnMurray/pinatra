@@ -11,6 +11,10 @@ Pinatra::before('*', function () {
   header('test: me');
 });
 
+Pinatra::after('*', function () {
+  echo 'DONE';
+});
+
 // Some test routes
 Pinatra::get('/hello/:name', function($name) {
   return $name;

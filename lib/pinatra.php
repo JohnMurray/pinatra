@@ -43,7 +43,7 @@ class Pinatra {
   private function register_before($match, $callback) {
     if (empty($match)) $match = '*';
     $match = $this->compute_regex($match);
-    $before_hooks[$match] = $callback;
+    $this->before_hooks[$match] = $callback;
   }
 
   /**
@@ -54,7 +54,7 @@ class Pinatra {
   private function register_after($match, $callback) {
     if (empty($match)) $match = '*';
     $match = $this->compute_regex($match);
-    $after_hooks[$match] = $callback;
+    $this->after_hooks[$match] = $callback;
   }
 
   /**
@@ -107,6 +107,14 @@ class Pinatra {
   public static function handle_request($method, $uri) {
     $app = Pinatra::instance();
 
+
+    // find and call all before-hooks
+    $before_matches = $app->find_all_routes($app->before_hooks, $uri);
+    foreach ($before_matches as $match) {
+      $match['callback']->bindTo($app);
+      call_user_func_array($match['callback'], $match['arguments']);
+    }
+
     // find and call route-handler
     $route_match = $app->find_route($app->routes, $method, $uri);
     if ($route_match !== null) {
@@ -114,6 +122,13 @@ class Pinatra {
       echo call_user_func_array(
         $route_match['callback'], 
         $route_match['arguments']);
+    }
+
+    // find and call all after-hooks
+    $after_matches = $app->find_all_routes($app->after_hooks, $uri);
+    foreach ($after_matches as $match) {
+      $match['callback']->bindTo($app);
+      call_user_func_array($match['callback'], $match['arguments']);
     }
     
   }
