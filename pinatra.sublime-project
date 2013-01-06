@@ -3,6 +3,9 @@
 	[
 		{
 			"path": "/C/wamp/www/pinatra"
+		},
+		{
+			"path": "/home/john/projects/pinatra"
 		}
 	]
 }

@@ -83,28 +83,34 @@ class Pinatra {
    * request based on the method and uri provided. This method (expecting
    * to be given a URI and method) can also be used for re-routing requests
    * internally.
+   *
+   * TODO: This method needs refactoring (badly)
    */
   public static function handle_request($method, $uri) {
-    // TODO: combine with routing code that I wrote at work...
     $app = Pinatra::instance();
     if ($method != null && !empty($method) && $uri != null && !empty($uri)) {
       $method = strtolower($method);
       foreach($app->routes[$method] as $match => $callback) {
-        $match_value = preg_match($match, $uri);
+        $match_groups = [];
+        $match_value = preg_match_all($match, $uri, $match_groups, PREG_SET_ORDER);
         if ($match_value === false) {
           // TODO: do something real here??
           echo 'ERROR on match.';
+          break;
         }
         else if ($match_value !== 0) {
           $callback = $callback->bindTo($app);
-          echo $callback();
-          return;
+          echo call_user_func_array($callback, array_slice($match_groups[0], 1));
+          break;
         }
       }
     }
   }
 
 
+  /**
+   * Used to start the application (after everything has been initialized)
+   */
   public static function run() {
     $uri = str_replace('', '', $_SERVER['REQUEST_URI']);
     Pinatra::handle_request('get', $uri);
