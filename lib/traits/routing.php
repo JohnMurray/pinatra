@@ -18,7 +18,7 @@
 trait Routing {
 
   private $URIParser_PLACEHOLDER = '([^\/]+)';
-  private $URIParser_GLOB = '*';
+  private $URIParser_GLOB = '.*?';
 
 
   /**
@@ -49,7 +49,7 @@ trait Routing {
     return $regex;
   }
 
-  private function find_route($method, $uri) {
+  private function find_route($routes, $method, $uri) {
     $return_value = null;
 
     if ($method != null && !empty($method) 
@@ -58,7 +58,7 @@ trait Routing {
       $method = strtolower($method);
       $uri = strtolower($uri);
 
-      foreach($this->routes[$method] as $match => $callback) {
+      foreach($routes[$method] as $match => $callback) {
         $match_groups = [];
         $match_value = preg_match_all(
           $match, 

@@ -108,7 +108,7 @@ class Pinatra {
     $app = Pinatra::instance();
 
     // find and call route-handler
-    $route_match = $app->find_route($method, $uri);
+    $route_match = $app->find_route($app->routes, $method, $uri);
     if ($route_match !== null) {
       $route_match['callback']->bindTo($app);
       echo call_user_func_array(
@@ -124,7 +124,7 @@ class Pinatra {
    */
   public static function run() {
     $app = Pinatra::instance();
-    
+
     $uri = str_replace(
       $app->config['base_path'], 
       '', 

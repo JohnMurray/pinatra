@@ -7,6 +7,10 @@ Pinatra::configure(function ($conf) {
   return $config;
 });
 
+Pinatra::before('*', function () {
+  header('test: me');
+});
+
 // Some test routes
 Pinatra::get('/hello/:name', function($name) {
   return $name;
