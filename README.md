@@ -28,6 +28,30 @@ php -S 0.0.0.0:8181
 ```
 
 
+Before hooks:
+
+```php
+// before everything, set a custom header
+Pinatra::before('*', function () { header("MyApp: v${version}"); });
+
+// before user's view their profile, force an update of
+// their stream (silly example)
+Pinatra::before('/user-profile/:id', function($id) {
+  update_user_stream($id);
+});
+```
+
+
+After hooks:
+
+```php
+// update site's hit-counter (also silly, but you get the point right?)
+Pinatra::after('*', function () {
+  update_site_hit_counter();
+});
+```
+
+
 ## Compatability
 
 This little framework is only compatible with PHP v5.4.x since it was just
