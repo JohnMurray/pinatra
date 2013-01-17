@@ -66,9 +66,10 @@ The items that I will be adding/implementing next are (roughly) as follows:
 + ~~Refactoring of handle_request function~~
 + ~~Configuration blocks~~
 + ~~Testing before and after hooks~~ (working)
-+ POST functionality
++ ~~POST functionality~~
++ PUT functionality
 + DELETE functionality
-+ HEAD functionality
++ ~~HEAD functionality~~
 + PSR-0 Autoloader (see Slim framework)
 + Ability to embed instances within each other (like Rack-apps)
 

@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"URI",
+				"URIParser_GLOB"
+			],
+			[
+				"post",
+				"post_actions"
+			],
+			[
+				"sales",
+				"salesperson_id"
+			],
+			[
 				"testi",
 				"testimonialWaiver"
 			],
@@ -75,16 +87,36 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 392.0,
+		"height": 242.0,
 		"selected_items":
 		[
+			[
+				":w",
+				":w - Save"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				":W",
+				":w - Save"
+			],
+			[
+				"sql",
+				"Set Syntax: SQL"
+			],
 			[
 				"xml",
 				"Set Syntax: XML"
 			],
 			[
-				":w",
-				":w - Save"
+				"php",
+				"Set Syntax: PHP"
+			],
+			[
+				"apache",
+				"Set Syntax: Apache Conf"
 			],
 			[
 				"json",
@@ -99,16 +131,8 @@
 				"Set Syntax: JavaScript"
 			],
 			[
-				":W",
-				":w - Save"
-			],
-			[
 				"html",
 				"HTML: Encode Special Characters"
-			],
-			[
-				"install",
-				"Package Control: Install Package"
 			],
 			[
 				":1",
@@ -117,10 +141,6 @@
 			[
 				"ssini",
 				"Set Syntax: INI"
-			],
-			[
-				"php",
-				"Set Syntax: PHP"
 			],
 			[
 				"c#",
@@ -215,7 +235,7 @@
 				"Set Syntax: SQL"
 			]
 		],
-		"width": 400.0
+		"width": 416.0
 	},
 	"console":
 	{
@@ -232,9 +252,30 @@
 	},
 	"file_history":
 	[
+		"/C/tfs/development/NetSuiteToolKit/Bookings/Data/OAContext.cs",
+		"/C/tfs/development/4D Data Extract and Reporting/packages/repositories.config",
+		"/C/tfs/development/4D Data Extract and Reporting/Addin/packages.config",
+		"/C/Users/jmurray/Documents/My Received Files/js1.html",
+		"/C/Users/jmurray/Documents/My Received Files/GuildGenerator.js",
+		"/C/Users/jmurray/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/jmurray/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/C/tfs/development/4D Data Extract and Reporting/UserAdministration/MainWindow.xaml",
+		"/C/tfs/development/4D Data Extract and Reporting/UserAdministration/MainWindow.xaml.cs",
+		"/C/tfs/development/4D Data Extract and Reporting/packages/ObjectARX2013Managed.1.0.2/ObjectARX2013Managed.1.0.2.nupkg",
+		"/D/ProjectFiles/FortCampbell/reports-estiamte.txt",
+		"/C/Users/jmurray/AppData/Local/Temp/Labyrinth/main.py",
+		"/C/cygwin/tmp/Labyrinth/main.py",
+		"/C/wamp/www/pinatra/app/conf.php",
+		"/C/wamp/www/pinatra/app/app.php",
+		"/C/wamp/www/pinatra/.htaccess",
+		"/C/wamp/www/pinatra/lib/pinatra.php",
+		"/C/wamp/www/pinatra/README.md",
+		"/C/wamp/www/pinatra/index.php",
+		"/C/tfs/development/4D Data Extract and Reporting/4D.sln",
+		"/C/wamp/www/pinatra/pinatra-tests.php",
+		"/D/ProjectFiles/NetworkShares/waffles/Bookings/Web/Web.config",
 		"/C/tfs/development/NetSuiteToolKit/Templates/support-survey-email.html",
 		"/C/tfs/development/NetSuiteToolKit/Templates/support-survey.html",
-		"/D/ProjectFiles/NetworkShares/waffles/Bookings/Web/Web.config",
 		"/D/ProjectFiles/NetworkShares/waffles/Bookings/WindowsService/NetSuiteBookings.WindowsService.exe.config",
 		"/C/tfs/development/NetSuiteToolKit/Bookings/WindowsService/bin/Release/App.config",
 		"/D/ProjectFiles/NetworkShares/waffles/Bookings/WindowsService/App.config",
@@ -338,28 +379,7 @@
 		"/D/TestFiles/ICAD-E/Ethernet/network test 10-18.iep",
 		"/C/SVNProjects/ICADShared/ICAD-E/CableTool/Ethernet/EthernetFunctions.cs",
 		"/C/Users/jmurray/Downloads/MemoizedOptimalBST.m",
-		"/C/Users/jmurray/Downloads/MatrixChainOrder.m",
-		"/C/Users/jmurray/Downloads/RecursiveOptimalBST.m",
-		"/C/SVNProjects/ICADShared/ICAD-E/DataUtils.cs",
-		"/C/ProgramData/Autodesk/Revit/Addins/2013/CurtainSystem.addin",
-		"/C/SVNProjects/ICADShared/ICAD-E/ICAD-E.csproj",
-		"/C/SVNProjects/WireCrafters/aWireCrafters.Installer/aWireCraftersInstaller.cs",
-		"/C/Users/jmurray/AppData/Roaming/Autodesk/Revit/Addins/2013/curtain/CurtainSystem.addin",
-		"/D/Program Files/Autodesk/Revit 2013 SDK/Software Development Kit/Samples/CurtainSystem/CS/CurtainSystem.addin",
-		"/D/Program Files/Autodesk/Revit 2013 SDK/Software Development Kit/Samples/CurtainSystem/CS/Command.cs",
-		"/C/Windows/System32/drivers/etc/hosts",
-		"/C/ProgramData/Autodesk/Revit Server 2013/Config/rsn.ini",
-		"/D/Program Files/Autodesk/Revit 2013 SDK/Software Development Kit/Samples/CurtainSystem/CurtainSystem.rvt",
-		"/C/tmp/RevitServerViewer/Program.cs",
-		"/C/tmp/RevitServerViewer/MyViewer.Designer.cs",
-		"/C/tmp/RevitServerViewer/MyViewer.cs",
-		"/C/ProgramData/ICADSupport/Network.xml",
-		"/C/ProgramData/ICADSupport/ICADPropertiesBeta.xml",
-		"/C/ProgramData/ICADSupport/ICADProperties.xml",
-		"/C/ProgramData/ICADSupport/eca.txt",
-		"/C/ProgramData/ICADSupport/UserValidation.csv",
-		"/C/ProgramData/ICADSupport/lastUpdateTime.udt",
-		"/D/test/Revit Server SDK/RevitServerViewer/Program.cs"
+		"/C/Users/jmurray/Downloads/MatrixChainOrder.m"
 	],
 	"find":
 	{
@@ -500,6 +520,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 150.0,
+	"side_bar_width": 215.0,
 	"status_bar_visible": true
 }

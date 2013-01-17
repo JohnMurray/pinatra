@@ -77,13 +77,25 @@ class Pinatra {
     $app = Pinatra::instance();
     $app->user_configuration($callback);
   }
+  public static function head($match, $callback) {
+    $app = Pinatra::instance();
+    $app->register('head', $match, $callback);
+  }
   public static function get($match, $callback) {
     $app = Pinatra::instance();
     $app->register('get', $match, $callback);
   }
+  public static function put($match, $callback) {
+    $app = Pinatra::instance();
+    $app->register('put', $match, $callback);
+  }
   public static function post($match, $callback) {
     $app = Pinatra::instance();
     $app->register('post', $match, $callback);
+  }
+  public static function delete($match, $callback) {
+    $app = Pinatra::instance();
+    $app->register('delete', $match, $callback);
   }
   public static function before($match, $callback) {
     $app = Pinatra::instance();
@@ -111,24 +123,32 @@ class Pinatra {
     // find and call all before-hooks
     $before_matches = $app->find_all_routes($app->before_hooks, $uri);
     foreach ($before_matches as $match) {
-      $match['callback']->bindTo($app);
-      call_user_func_array($match['callback'], $match['arguments']);
+      call_user_func_array(
+        $match['callback']->bindTo($app), 
+        $match['arguments']);
     }
 
     // find and call route-handler
     $route_match = $app->find_route($app->routes, $method, $uri);
     if ($route_match !== null) {
-      $route_match['callback']->bindTo($app);
-      echo call_user_func_array(
-        $route_match['callback'], 
+      if ($method === 'post' || $method === 'put') 
+        array_unshift($route_match['arguments'], $_POST);
+      $route_res = call_user_func_array(
+        $route_match['callback']->bindTo($app), 
         $route_match['arguments']);
+
+      if ($method !== 'head') {
+        print($route_res);
+      }
+      var_dump($_PUT);
     }
 
     // find and call all after-hooks
     $after_matches = $app->find_all_routes($app->after_hooks, $uri);
     foreach ($after_matches as $match) {
-      $match['callback']->bindTo($app);
-      call_user_func_array($match['callback'], $match['arguments']);
+      call_user_func_array(
+        $match['callback']->bindTo($app), 
+        $match['arguments']);
     }
     
   }
@@ -144,8 +164,9 @@ class Pinatra {
       $app->config['base_path'], 
       '', 
       $_SERVER['REQUEST_URI']);
+    $method = strtolower($_SERVER['REQUEST_METHOD']);
 
-    Pinatra::handle_request('get', $uri);
+    Pinatra::handle_request($method, $uri);
   }
 
 }
