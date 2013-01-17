@@ -68,7 +68,7 @@ The items that I will be adding/implementing next are (roughly) as follows:
 + ~~Testing before and after hooks~~ (working)
 + ~~POST functionality~~
 + PUT functionality
-+ DELETE functionality
++ ~~DELETE functionality~~
 + ~~HEAD functionality~~
 + PSR-0 Autoloader (see Slim framework)
 + Ability to embed instances within each other (like Rack-apps)
