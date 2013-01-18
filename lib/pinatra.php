@@ -3,6 +3,7 @@
 require 'traits/singleton.php';
 require 'traits/json_utils.php';
 require 'traits/routing.php';
+require 'traits/body_utils.php';
 
 
 /**
@@ -14,6 +15,7 @@ class Pinatra {
   use singleton;
   use JSONUtils;
   use Routing;
+  use HTMLBodyUtils;
 
   protected $before_hooks = [];
   protected $after_hooks = [];
@@ -131,8 +133,13 @@ class Pinatra {
     // find and call route-handler
     $route_match = $app->find_route($app->routes, $method, $uri);
     if ($route_match !== null) {
-      if ($method === 'post' || $method === 'put') 
-        array_unshift($route_match['arguments'], $_POST);
+        
+  
+      $request_body_data = $app->get_body_data($method);
+      if ($request_body_data !== null) {
+        array_unshift($route_match['arguments'], $request_body_data);
+      }
+
       $route_res = call_user_func_array(
         $route_match['callback']->bindTo($app), 
         $route_match['arguments']);

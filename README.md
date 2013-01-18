@@ -67,7 +67,7 @@ The items that I will be adding/implementing next are (roughly) as follows:
 + ~~Configuration blocks~~
 + ~~Testing before and after hooks~~ (working)
 + ~~POST functionality~~
-+ PUT functionality
++ ~~PUT functionality~~
 + ~~DELETE functionality~~
 + ~~HEAD functionality~~
 + PSR-0 Autoloader (see Slim framework)
