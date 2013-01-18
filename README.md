@@ -70,8 +70,6 @@ The items that I will be adding/implementing next are (roughly) as follows:
 + ~~PUT functionality~~
 + ~~DELETE functionality~~
 + ~~HEAD functionality~~
-+ PSR-0 Autoloader (see Slim framework)
-+ Ability to embed instances within each other (like Rack-apps)
 
 ## Contributing
 If you actually like the sound of what I plan to do and would like to take it
