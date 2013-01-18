@@ -1,5 +1,12 @@
 # Pinatra
 
+__Update:__ I finished everything that I had planned to do... So, unless someone
+else finds this project interesting, I believe that I am done working on it for
+now. Mainly because there are better/more-mature projects out there and I
+[hate][1] creating web frameworks in a serious manner without proper
+justification and "just for fun" isn't a good enough reason to clutter the PHP
+ecosystem.
+
 If the name of this project isn't enough to let you know what it is, this is a
 Sinatra clone in PHP. Currently this is not a serious project, just a little
 something for me to try and learn a little more about PHP. 
@@ -77,3 +84,5 @@ a little further, feel free to send me an email at
 [me@johnmurray.io](mailto:me@johnmurray.io) or just send me a pull-request! :-]
 
 
+
+  [1]: http://johnmurray.io/log/2012/04/19/New-Web-Frameworks.md
